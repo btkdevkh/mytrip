@@ -1,0 +1,126 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #333;
+  color: #fff;
+  min-width: 450px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.container {
+  margin: 0 10px;
+}
+img {
+  width: 100%;
+}
+
+/* Header */
+.main-header {
+  background-color: #0bad4c;
+}
+.main-header-nav {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-header-nav-ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Main */
+.main {
+  margin: 10px 0;
+}
+.main h2 {
+  margin-bottom: 15px;
+}
+.main-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+.main-cards-item {
+  background-color: #ddd;
+  color: #333;
+  border-radius: 10px;
+}
+.main-cards-item-img-wrapper {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.main-cards-item-img-wrapper-chevron-left,
+.main-cards-item-img-wrapper-chevron-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-cards-item-img-wrapper-chevron-left {
+  left: 5px;
+}
+.main-cards-item-img-wrapper-chevron-right {
+  right: 5px;
+}
+.main-cards-item-imgs {
+  width: 100%;
+  height: 170px;
+}
+.main-cards-item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.main-cards-item-description {
+  padding: 5px 15px;
+}
+.main-cards-item-description-h3 {
+  margin-bottom: 10px;
+}
+.main-cards-item-description-p {
+  text-align: justify;
+  margin-bottom: 10px;
+}
+.main-cards-item-description-link {
+  display: inline-block;
+  margin-bottom: 10px;
+  background-color: purple;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+  .main-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .main-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
